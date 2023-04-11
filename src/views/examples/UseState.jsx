@@ -14,6 +14,14 @@ const UseState = (props) => {
                 subtitle="Estado em componentes funcionais!"
             />
             <SectionTitle title="Exercicio 01"/>
+            <div className='center'>
+                <span className='text'>{count}</span>
+                <div>
+                    <button className="btn" onClick={() => setCount(count + 1)}>+1</button>
+                    <button className="btn" onClick={() => setCount(count - 1)}>-1</button>
+                    {/* <button className="btn" onClick={() => setCount(currect => currect + 1000)}>+1000</button> */}
+                </div>
+            </div>
             <SectionTitle title="Exercicio 02"/>
         </div>
     )
