@@ -29,10 +29,10 @@ const UseEffect = (props) => {
     /* exercicio 2 */
 
     const [numeroPI, setNumeroPI] = useState(1)
-    const [parOuImpar, setparOuImpar] = useState('Impar')
+    const [status, setStatus] = useState('Impar')
 
     useEffect(function(){
-        setparOuImpar(parImparFunc(numeroPI))
+        setStatus(parImparFunc(numeroPI))
     }, [numeroPI])
 
     return (
@@ -55,7 +55,7 @@ const UseEffect = (props) => {
                 <SectionTitle title={"Exercicio 02"}/>
                 <div>
                     <span className="text">Par ou Impar: </span>
-                    <span className="text red">{parOuImpar}</span>
+                    <span className="text red">{status}</span>
                 </div>
                 <input type='number' className='input' 
                     value={numeroPI} 
