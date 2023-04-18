@@ -29,7 +29,7 @@ const UseRef = (props) => {
     /* desafio */
     const merge = function(s1,s2){
         return [...s1].map(function(e,i){
-            return `${e}-` 
+            return `${e}${s2[i] || ''}` 
         }).join("")
     }
     return (
@@ -42,7 +42,7 @@ const UseRef = (props) => {
             <div className="center">
                 <div>
                     <span className="text">Valor:</span>
-                    <span className="text">{value1} [</span> 
+                    <span className="text">{merge(value1,value2)} [</span> 
                     <span className="text red">{count.current}</span>
                     <span className='text'>]</span>
                 </div>
